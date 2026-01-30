@@ -15,4 +15,10 @@ from typing import List, Any
 
 
 def delete_from_list(list_to_clean: List, item_to_delete: Any) -> List:
-    ...
+    # itera la lista y elimina todas las ocurrencias del elemento especificado mediante pop, usando un bucle for con rango inverso
+    for i in range(len(list_to_clean) - 1, -1, -1 ):
+        if list_to_clean[i] == item_to_delete:
+            list_to_clean.pop(i)
+    return list_to_clean
+
+
